@@ -1,0 +1,191 @@
+{% extends 'student/studentbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+      a:link {
+        text-decoration: none;
+      }
+  
+      .order-card {
+        color: rgb(255, 255, 255);
+      }
+  
+      .bg-c-blue {
+        background: #04868f;
+      }
+  
+      .bg-c-green {
+        background:#4C51BF;
+      }
+  
+      .bg-c-yellow {
+        background: #F56565;
+      }
+  
+      .bg-c-pink {
+        background: #663a30;
+      }
+  
+  
+      .card {
+        
+        -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+        margin-bottom: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      .card .card-block {
+        padding: 25px;
+      }
+  
+      .order-card i {
+        font-size: 26px;
+      }
+  
+      .f-left {
+        float: left;
+      }
+  
+      .f-right {
+        float: right;
+      }
+      header {
+      left: 0px;
+      right: 0px;
+    }
+    </style>
+  </head>
+<br><br>
+
+  <div class="container">
+    <div class="row">
+      
+      <!-- <img src="{% static "DB/DB3.jpg" %}" class="profile_image" alt="" width="500" > -->
+  
+      <!-- <div class="col-md-4 col-xl-6">
+        <div class="card bg-c-blue order-card">
+          <div class="card-block">
+            <h6 class="m-b-20">Available Sessions</h6>
+           <h2 class="text-right"><i class="fas fa-book f-left"></i><span>{{total_course}}</span></h2>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+      <!-- <img src="{% static "DB/DB3.jpg" %}" class="profile_image" alt="" width="500" > -->
+
+<!-- Styles -->
+<style>
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+  }
+  
+  </style>
+  
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  
+  <!-- Chart code -->
+  <script>
+  am4core.ready(function() {
+  
+  // Themes begin
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+  
+  var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+  
+  chart.legend = new am4charts.Legend();
+  
+  chart.data = [
+    {
+      country: "Sessions Attempted",
+      litres: {{attempts}}
+    },
+    {
+      country: "Sessions Unattempted",
+      litres: {{unattempts}}
+    },
+  ];
+  
+  var series = chart.series.push(new am4charts.PieSeries3D());
+  series.dataFields.value = "litres";
+  series.dataFields.category = "country";
+  
+  }); // end am4core.ready()
+  </script>
+  
+  <!-- HTML -->
+  <div id="chartdiv"></div>
+  amCharts
+  
+  
+
+<br><br><br>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+{% if attempts == 1%}
+      <img src="{% static "DB/DB1.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 2%}
+      <img src="{% static "DB/DB2.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 3%}
+      <img src="{% static "DB/DB3.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 4%}
+      <img src="{% static "DB/DB4.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 5%}
+      <img src="{% static "DB/DB5.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 6%}
+      <img src="{% static "DB/DB6.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 7%}
+      <img src="{% static "DB/DB7.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 8%}
+      <img src="{% static "DB/DB8.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 9%}
+      <img src="{% static "DB/DB9.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 10%}
+      <img src="{% static "DB/DB10.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 11%}
+      <img src="{% static "DB/DB11.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 12%}
+      <img src="{% static "DB/DB12.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 13%}
+      <img src="{% static "DB/DB13.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 14%}
+      <img src="{% static "DB/DB14.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 15%}
+      <img src="{% static "DB/DB15.jpg" %}" class="profile_image" alt="" width="100%" >
+{% else %}
+      <img src="{% static "DB/DB16.jpg" %}" class="profile_image" alt="" width="100%" >
+{% endif %}
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+
+
+
+
+{% endblock content %}
