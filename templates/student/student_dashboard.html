@@ -1,0 +1,94 @@
+{% extends 'student/studentbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+{% load static %}
+
+
+
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+  <div class="row justify-content-center mt-5">
+      <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas> -->
+      <canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+  </div>
+
+<script>
+var xValues = {{ x|safe }};
+var yValues = {{ y|safe }};
+var barColors = [
+  "#377E47",
+  "#CC6C4F",
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: " "
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+
+
+<head>
+
+  <br><br><br>
+  
+{% if attempts == 1%}
+      <img src="{% static "DB/DB1.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 2%}
+      <img src="{% static "DB/DB2.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 3%}
+      <img src="{% static "DB/DB3.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 4%}
+      <img src="{% static "DB/DB4.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 5%}
+      <img src="{% static "DB/DB5.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 6%}
+      <img src="{% static "DB/DB6.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 7%}
+      <img src="{% static "DB/DB7.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 8%}
+      <img src="{% static "DB/DB8.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 9%}
+      <img src="{% static "DB/DB9.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 10%}
+      <img src="{% static "DB/DB10.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 11%}
+      <img src="{% static "DB/DB11.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 12%}
+      <img src="{% static "DB/DB12.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 13%}
+      <img src="{% static "DB/DB13.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 14%}
+      <img src="{% static "DB/DB14.jpg" %}" class="profile_image" alt="" width="100%" >
+{% elif attempts == 15%}
+      <img src="{% static "DB/DB15.jpg" %}" class="profile_image" alt="" width="100%" >
+{% else %}
+      <img src="{% static "DB/DB16.jpg" %}" class="profile_image" alt="" width="100%" >
+{% endif %}
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+
+
+
+
+
+{% endblock content %}

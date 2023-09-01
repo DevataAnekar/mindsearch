@@ -1,0 +1,6 @@
+
+Devta mam:
+	Pre & Post test : category of the result in the last column in the result Excel sheet
+
+Dashboard:
+	admin should get the status of the every user

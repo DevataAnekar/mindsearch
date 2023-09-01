@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #cbb9d1;
+    text-align: center;
+}
+#customers tr:nth-child(odd){background-color: #d0bfd0;
+    text-align: center;
+}
+
+#customers tr:hover {background-color: #7295a1;}
+
+#customers th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  background-color: #a6bda9;
+  color: rgb(255, 255, 255);
+}
+
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.button {
+      border: none;
+      color: white;
+      padding: 10px 35%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 30px;
+      margin: 4px 2px;
+      transition-duration: 2s;
+      cursor: pointer;
+    }
+    
+    .button1 {
+      background-color:  #babada;
+      color: rgb(13, 0, 0); 
+      border: 2px solid  rgb(180, 145, 5); 
+    }
+    
+    .button1:hover {
+      background-color: rgb(132, 198, 198); 
+      color: rgb(72, 45, 168);
+    }
+
+  #demobox {
+      background-color: rgba(196, 190, 225, 0.943) ;
+      border: 5px solid  rgb(81, 5, 180); 
+      font-size: 30px;   
+      padding: 10px 2%;
+      }
+
+
+      /*  */
+/* The container */
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+    
+</style>
+
+</style>
+</head>
+<body>
+
+<!-- <h1>Performance Parameters</h1> -->
+<br><br><br>
+
+<form class="box" method="post">
+
+<div id="demobox">
+  <b>Consent Letter for Pretest: </b>
+  <br><br>
+  
+  This is a Mental Health Screening Tool that would help in providing appropriate support and guidance at the correct time.
+  <br><br>
+  The results of the tests will be kept confidential and will not be disclosed to any third party without your consent. The identity of individual participant will not be disclosed at any point in the test development research.
+  <br><br>
+  Now I know the use of the test and understand that the results of the tests will be kept confidential. I am ready to take the test and agree for the test responses to be used for research purpose only.
+  <br><br>
+
+  I agree and give my consent <input type="checkbox" id="myCheck" name="test" required>
+
+
+</div>
+
+
+
+
+
+
+<br><br>
+  
+
+
+  
+
+
+
+
+<table id="customers" border="1" width="90%">
+
+  <tr>
+    <th colspan="12">
+          Pre Test
+          <br><br>
+          
+          Read all the statements carefully. Record your responses with reference to your experiences in last 2 months. Select the number for each item on ‘Frequency’ as well as ‘Intensity’ on five point rating scales given below.
+          <br><br>
+          <i>
+          1. &nbsp Frequency means ‘how many times’ you experienced it?
+          <br>
+          2. &nbsp Intensity means ‘extent to which’ you experienced it?
+          </i>
+    </th>
+  </tr>
+
+
+  <tr>
+    <th rowspan="3">Que No.</th>
+    <th rowspan="3">Question</th>
+    <th colspan="5">Frequency</th>
+    <th colspan="5">Intensity</th>
+  </tr>
+
+  
+  <tr>
+    <th style="width: 5%">Never</th>
+    <th style="width: 5%">Rarely</th>
+    <th style="width: 5%">Occasionally</th>
+    <th style="width: 5%">Many times</th>
+    <th style="width: 5%">Always</th>
+    <th style="width: 5%">No</th>
+    <th style="width: 5%">Mild</th>
+    <th style="width: 5%">Moderate</th>
+    <th style="width: 5%">Severe</th>
+    <th style="width: 5%">Profound</th>
+  </tr>
+
+  <tr>
+    <th>0</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>0</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+  </tr>
+
+
+  
+<tr>
+  <th colspan="12">
+
+  </th>
+</tr>
+
+<tr>
+  <th colspan="12">
+    Possibility 1: Person ‘X’ never had headache (Frequency 0). Hence no question of intensity (0). So the response is:
+  </th>
+</tr>
+
+<tr>
+  <td><b>  Example 1. </b></td>
+  <td><b>  My head is aching.   </b></td>
+  <td><input type="radio" id="qfb1" name="qfb1" value="0" checked></td>
+  <td><input type="radio" id="qfb1" name="qfb1" value="1"></td>
+  <td><input type="radio" id="qfb1" name="qfb1" value="2"></td>
+  <td><input type="radio" id="qfb1" name="qfb1" value="3"></td>
+  <td><input type="radio" id="qfb1" name="qfb1" value="4"></td>
+  <td><input type="radio" id="qib1" name="qib1" value="0" checked></td>
+  <td><input type="radio" id="qib1" name="qib1" value="1"></td>
+  <td><input type="radio" id="qib1" name="qib1" value="2"></td>
+  <td><input type="radio" id="qib1" name="qib1" value="3"></td>
+  <td><input type="radio" id="qib1" name="qib1" value="4"></td>
+</tr>
+
+<tr>
+  <th colspan="12">
+
+  </th>
+</tr>
+
+<tr>
+  <th colspan="12">
+
+  </th>
+</tr>
+
+<tr>
+  <th colspan="12">
+    Possibility 2: Person ‘Y’ occasionally (Frequency 2) had headache. But the intensity of headache was profound (4). So the response is:
+  </th>
+</tr>
+
+<tr>
+  <td><b>  Example 2. </b></td>
+  <td><b>  My head is aching.   </b></td>
+  <td><input type="radio" id="qfa1" name="qfa1" value="0" ></td>
+  <td><input type="radio" id="qfa1" name="qfa1" value="1"></td>
+  <td><input type="radio" id="qfa1" name="qfa1" value="2" checked></td>
+  <td><input type="radio" id="qfa1" name="qfa1" value="3"></td>
+  <td><input type="radio" id="qfa1" name="qfa1" value="4"></td>
+  <td><input type="radio" id="qia1" name="qia1" value="0"></td>
+  <td><input type="radio" id="qia1" name="qia1" value="1"></td>
+  <td><input type="radio" id="qia1" name="qia1" value="2"></td>
+  <td><input type="radio" id="qia1" name="qia1" value="3"></td>
+  <td><input type="radio" id="qia1" name="qia1" value="4" checked></td>
+</tr>
+
+
+
+</table>
+
+
+<br><br><br>
+
+<br><br><br>
+
+
+
+    <div class="row justify-content-center mt-5 ">
+        <div class="col-md-7">
+                  <table id="customers" border="1" width="90%">
+
+                    <tr>
+                      <td colspan="12">
+                          <h2>
+                            Note that the responses on frequency and intensity of each statement will differ for every individual. Record your responses frankly and sincerely. Do not think too much about any statement.                    
+                          </h2>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <th rowspan="2">Que No.</th>
+                      <th rowspan="2">Question</th>
+                      <th colspan="5">Frequency</th>
+                      <th colspan="5">Intensity</th>
+                    </tr>
+
+                  <tr>
+                      <th>0</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                      <th>0</th>
+                      <th>1</th>
+                      <th>2</th>
+                      <th>3</th>
+                      <th>4</th>
+                    </tr>
+
+                    
+                    <!-- <tr>
+                      <th style="width: 5%">Never</th>
+                      <th style="width: 5%">Rarely</th>
+                      <th style="width: 5%">Occasionally</th>
+                      <th style="width: 5%">Many times</th>
+                      <th style="width: 5%">Always</th>
+                      <th style="width: 5%">No</th>
+                      <th style="width: 5%">Mild</th>
+                      <th style="width: 5%">Moderate</th>
+                      <th style="width: 5%">Severe</th>
+                      <th style="width: 5%">Profound</th>
+                    </tr> -->
+
+
+                  <tr>
+                      <td><b>  1. </b></td>
+                      <td><b>  I feel satisfied with my life.   </b></td>
+                      <td><input type="radio" id="qf1" name="qf1" value="0" required></td>
+                      <td><input type="radio" id="qf1" name="qf1" value="1"></td>
+                      <td><input type="radio" id="qf1" name="qf1" value="2"></td>
+                      <td><input type="radio" id="qf1" name="qf1" value="3"></td>
+                      <td><input type="radio" id="qf1" name="qf1" value="4"></td>
+                      <td><input type="radio" id="qi1" name="qi1" value="0" required></td>
+                      <td><input type="radio" id="qi1" name="qi1" value="1"></td>
+                      <td><input type="radio" id="qi1" name="qi1" value="2"></td>
+                      <td><input type="radio" id="qi1" name="qi1" value="3"></td>
+                      <td><input type="radio" id="qi1" name="qi1" value="4"></td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td><b>  2. </b></td>
+                    <td><b>  I feel that things are going out of control.   </b></td>
+                    <td><input type="radio" id="qf2" name="qf2" value="0"  required></td>
+                    <td><input type="radio" id="qf2" name="qf2" value="1"></td>
+                    <td><input type="radio" id="qf2" name="qf2" value="2"></td>
+                    <td><input type="radio" id="qf2" name="qf2" value="3"></td>
+                    <td><input type="radio" id="qf2" name="qf2" value="4"></td>
+                    <td><input type="radio" id="qi2" name="qi2" value="0" required></td>
+                    <td><input type="radio" id="qi2" name="qi2" value="1"></td>
+                    <td><input type="radio" id="qi2" name="qi2" value="2"></td>
+                    <td><input type="radio" id="qi2" name="qi2" value="3"></td>
+                    <td><input type="radio" id="qi2" name="qi2" value="4"></td>
+                </tr>
+
+
+                
+                <tr>
+                  <td><b>  3. </b></td>
+                  <td><b>  I feel detached from others and unable to connect to anyone.   </b></td>
+                  <td><input type="radio" id="qf3" name="qf3" value="0" required></td>
+                  <td><input type="radio" id="qf3" name="qf3" value="1"></td>
+                  <td><input type="radio" id="qf3" name="qf3" value="2"></td>
+                  <td><input type="radio" id="qf3" name="qf3" value="3"></td>
+                  <td><input type="radio" id="qf3" name="qf3" value="4"></td>
+                  <td><input type="radio" id="qi3" name="qi3" value="0" required></td>
+                  <td><input type="radio" id="qi3" name="qi3" value="1"></td>
+                  <td><input type="radio" id="qi3" name="qi3" value="2"></td>
+                  <td><input type="radio" id="qi3" name="qi3" value="3"></td>
+                  <td><input type="radio" id="qi3" name="qi3" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  4. </b></td>
+                  <td><b>  I engage in repeated behaviors to escape anxious thoughts.   </b></td>
+                  <td><input type="radio" id="qf4" name="qf4" value="0" required></td>
+                  <td><input type="radio" id="qf4" name="qf4" value="1"></td>
+                  <td><input type="radio" id="qf4" name="qf4" value="2"></td>
+                  <td><input type="radio" id="qf4" name="qf4" value="3"></td>
+                  <td><input type="radio" id="qf4" name="qf4" value="4"></td>
+                  <td><input type="radio" id="qi4" name="qi4" value="0" required></td>
+                  <td><input type="radio" id="qi4" name="qi4" value="1"></td>
+                  <td><input type="radio" id="qi4" name="qi4" value="2"></td>
+                  <td><input type="radio" id="qi4" name="qi4" value="3"></td>
+                  <td><input type="radio" id="qi4" name="qi4" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  5. </b></td>
+                  <td><b>  I think most of the people have got more than they deserve.   </b></td>
+                  <td><input type="radio" id="qf5" name="qf5" value="0" required></td>
+                  <td><input type="radio" id="qf5" name="qf5" value="1"></td>
+                  <td><input type="radio" id="qf5" name="qf5" value="2"></td>
+                  <td><input type="radio" id="qf5" name="qf5" value="3"></td>
+                  <td><input type="radio" id="qf5" name="qf5" value="4"></td>
+                  <td><input type="radio" id="qi5" name="qi5" value="0" required></td>
+                  <td><input type="radio" id="qi5" name="qi5" value="1"></td>
+                  <td><input type="radio" id="qi5" name="qi5" value="2"></td>
+                  <td><input type="radio" id="qi5" name="qi5" value="3"></td>
+                  <td><input type="radio" id="qi5" name="qi5" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  6. </b></td>
+                  <td><b>   I feel empty.  </b></td>
+                  <td><input type="radio" id="qf6" name="qf6" value="0" required></td>
+                  <td><input type="radio" id="qf6" name="qf6" value="1"></td>
+                  <td><input type="radio" id="qf6" name="qf6" value="2"></td>
+                  <td><input type="radio" id="qf6" name="qf6" value="3"></td>
+                  <td><input type="radio" id="qf6" name="qf6" value="4"></td>
+                  <td><input type="radio" id="qi6" name="qi6" value="0" required></td>
+                  <td><input type="radio" id="qi6" name="qi6" value="1"></td>
+                  <td><input type="radio" id="qi6" name="qi6" value="2"></td>
+                  <td><input type="radio" id="qi6" name="qi6" value="3"></td>
+                  <td><input type="radio" id="qi6" name="qi6" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  7. </b></td>
+                  <td><b>  I feel that I am not myself.   </b></td>
+                  <td><input type="radio" id="qf7" name="qf7" value="0" required></td>
+                  <td><input type="radio" id="qf7" name="qf7" value="1"></td>
+                  <td><input type="radio" id="qf7" name="qf7" value="2"></td>
+                  <td><input type="radio" id="qf7" name="qf7" value="3"></td>
+                  <td><input type="radio" id="qf7" name="qf7" value="4"></td>
+                  <td><input type="radio" id="qi7" name="qi7" value="0" required></td>
+                  <td><input type="radio" id="qi7" name="qi7" value="1"></td>
+                  <td><input type="radio" id="qi7" name="qi7" value="2"></td>
+                  <td><input type="radio" id="qi7" name="qi7" value="3"></td>
+                  <td><input type="radio" id="qi7" name="qi7" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  8. </b></td>
+                  <td><b>  I have tension headache.   </b></td>
+                  <td><input type="radio" id="qf8" name="qf8" value="0" required></td>
+                  <td><input type="radio" id="qf8" name="qf8" value="1"></td>
+                  <td><input type="radio" id="qf8" name="qf8" value="2"></td>
+                  <td><input type="radio" id="qf8" name="qf8" value="3"></td>
+                  <td><input type="radio" id="qf8" name="qf8" value="4"></td>
+                  <td><input type="radio" id="qi8" name="qi8" value="0" required></td>
+                  <td><input type="radio" id="qi8" name="qi8" value="1"></td>
+                  <td><input type="radio" id="qi8" name="qi8" value="2"></td>
+                  <td><input type="radio" id="qi8" name="qi8" value="3"></td>
+                  <td><input type="radio" id="qi8" name="qi8" value="4"></td>
+                </tr>
+
+
+
+                
+                <tr>
+                  <td><b>  9. </b></td>
+                  <td><b>  I have accomplished the goals that I wanted to.   </b></td>
+                  <td><input type="radio" id="qf9" name="qf9" value="0" required></td>
+                  <td><input type="radio" id="qf9" name="qf9" value="1"></td>
+                  <td><input type="radio" id="qf9" name="qf9" value="2"></td>
+                  <td><input type="radio" id="qf9" name="qf9" value="3"></td>
+                  <td><input type="radio" id="qf9" name="qf9" value="4"></td>
+                  <td><input type="radio" id="qi9" name="qi9" value="0" required></td>
+                  <td><input type="radio" id="qi9" name="qi9" value="1"></td>
+                  <td><input type="radio" id="qi9" name="qi9" value="2"></td>
+                  <td><input type="radio" id="qi9" name="qi9" value="3"></td>
+                  <td><input type="radio" id="qi9" name="qi9" value="4"></td>
+                </tr>
+
+
+
+                <tr>
+                  <td><b>  10. </b></td>
+                  <td><b>  I am afraid to face new people in social situations.   </b></td>
+                  <td><input type="radio" id="qf10" name="qf10" value="0" required></td>
+                  <td><input type="radio" id="qf10" name="qf10" value="1"></td>
+                  <td><input type="radio" id="qf10" name="qf10" value="2"></td>
+                  <td><input type="radio" id="qf10" name="qf10" value="3"></td>
+                  <td><input type="radio" id="qf10" name="qf10" value="4"></td>
+                  <td><input type="radio" id="qi10" name="qi10" value="0" required></td>
+                  <td><input type="radio" id="qi10" name="qi10" value="1"></td>
+                  <td><input type="radio" id="qi10" name="qi10" value="2"></td>
+                  <td><input type="radio" id="qi10" name="qi10" value="3"></td>
+                  <td><input type="radio" id="qi10" name="qi10" value="4"></td>
+              </tr>
+
+
+              <tr>
+                <td><b>  11. </b></td>
+                <td><b>  I don’t enjoy doing my day to day activities.   </b></td>
+                <td><input type="radio" id="qf11" name="qf11" value="0" required></td>
+                <td><input type="radio" id="qf11" name="qf11" value="1"></td>
+                <td><input type="radio" id="qf11" name="qf11" value="2"></td>
+                <td><input type="radio" id="qf11" name="qf11" value="3"></td>
+                <td><input type="radio" id="qf11" name="qf11" value="4"></td>
+                <td><input type="radio" id="qi11" name="qi11" value="0" required></td>
+                <td><input type="radio" id="qi11" name="qi11" value="1"></td>
+                <td><input type="radio" id="qi11" name="qi11" value="2"></td>
+                <td><input type="radio" id="qi11" name="qi11" value="3"></td>
+                <td><input type="radio" id="qi11" name="qi11" value="4"></td>
+            </tr>
+
+
+
+            <tr>
+              <td><b>  12. </b></td>
+              <td><b>   I feel burdened by amount of work.  </b></td>
+              <td><input type="radio" id="qf12" name="qf12" value="0" required></td>
+              <td><input type="radio" id="qf12" name="qf12" value="1"></td>
+              <td><input type="radio" id="qf12" name="qf12" value="2"></td>
+              <td><input type="radio" id="qf12" name="qf12" value="3"></td>
+              <td><input type="radio" id="qf12" name="qf12" value="4"></td>
+              <td><input type="radio" id="qi12" name="qi12" value="0" required></td>
+              <td><input type="radio" id="qi12" name="qi12" value="1"></td>
+              <td><input type="radio" id="qi12" name="qi12" value="2"></td>
+              <td><input type="radio" id="qi12" name="qi12" value="3"></td>
+              <td><input type="radio" id="qi12" name="qi12" value="4"></td>
+          </tr>
+
+
+
+
+
+          <tr>
+            <td><b>  13. </b></td>
+            <td><b>  I think it is important to show everyone their right place.   </b></td>
+            <td><input type="radio" id="qf13" name="qf13" value="0" required></td>
+            <td><input type="radio" id="qf13" name="qf13" value="1"></td>
+            <td><input type="radio" id="qf13" name="qf13" value="2"></td>
+            <td><input type="radio" id="qf13" name="qf13" value="3"></td>
+            <td><input type="radio" id="qf13" name="qf13" value="4"></td>
+            <td><input type="radio" id="qi13" name="qi13" value="0" required></td>
+            <td><input type="radio" id="qi13" name="qi13" value="1"></td>
+            <td><input type="radio" id="qi13" name="qi13" value="2"></td>
+            <td><input type="radio" id="qi13" name="qi13" value="3"></td>
+            <td><input type="radio" id="qi13" name="qi13" value="4"></td>
+        </tr>
+
+
+
+
+
+        <tr>
+          <td><b>  14. </b></td>
+          <td><b>   I have problems with irritable bowel.  </b></td>
+          <td><input type="radio" id="qf14" name="qf14" value="0" required></td>
+          <td><input type="radio" id="qf14" name="qf14" value="1"></td>
+          <td><input type="radio" id="qf14" name="qf14" value="2"></td>
+          <td><input type="radio" id="qf14" name="qf14" value="3"></td>
+          <td><input type="radio" id="qf14" name="qf14" value="4"></td>
+          <td><input type="radio" id="qi14" name="qi14" value="0" required></td>
+          <td><input type="radio" id="qi14" name="qi14" value="1"></td>
+          <td><input type="radio" id="qi14" name="qi14" value="2"></td>
+          <td><input type="radio" id="qi14" name="qi14" value="3"></td>
+          <td><input type="radio" id="qi14" name="qi14" value="4"></td>
+      </tr>
+
+
+
+
+
+        <tr>
+          <td><b>  15. </b></td>
+          <td><b>   I am stressed because of my responsibilities.  </b></td>
+          <td><input type="radio" id="qf15" name="qf15" value="0" required></td>
+          <td><input type="radio" id="qf15" name="qf15" value="1"></td>
+          <td><input type="radio" id="qf15" name="qf15" value="2"></td>
+          <td><input type="radio" id="qf15" name="qf15" value="3"></td>
+          <td><input type="radio" id="qf15" name="qf15" value="4"></td>
+          <td><input type="radio" id="qi15" name="qi15" value="0" required></td>
+          <td><input type="radio" id="qi15" name="qi15" value="1"></td>
+          <td><input type="radio" id="qi15" name="qi15" value="2"></td>
+          <td><input type="radio" id="qi15" name="qi15" value="3"></td>
+          <td><input type="radio" id="qi15" name="qi15" value="4"></td>
+      </tr>
+
+
+
+
+
+    <tr>
+      <td><b>  16. </b></td>
+      <td><b>  I am exhausted and unable to complete daily tasks.   </b></td>
+      <td><input type="radio" id="qf16" name="qf16" value="0" required></td>
+      <td><input type="radio" id="qf16" name="qf16" value="1"></td>
+      <td><input type="radio" id="qf16" name="qf16" value="2"></td>
+      <td><input type="radio" id="qf16" name="qf16" value="3"></td>
+      <td><input type="radio" id="qf16" name="qf16" value="4"></td>
+      <td><input type="radio" id="qi16" name="qi16" value="0" required></td>
+      <td><input type="radio" id="qi16" name="qi16" value="1"></td>
+      <td><input type="radio" id="qi16" name="qi16" value="2"></td>
+      <td><input type="radio" id="qi16" name="qi16" value="3"></td>
+      <td><input type="radio" id="qi16" name="qi16" value="4"></td>
+  </tr>
+
+
+            <tr>
+              <td><b>  17. </b></td>
+              <td><b>   I feel restless.  </b></td>
+              <td><input type="radio" id="qf17" name="qf17" value="0" required></td>
+              <td><input type="radio" id="qf17" name="qf17" value="1"></td>
+              <td><input type="radio" id="qf17" name="qf17" value="2"></td>
+              <td><input type="radio" id="qf17" name="qf17" value="3"></td>
+              <td><input type="radio" id="qf17" name="qf17" value="4"></td>
+              <td><input type="radio" id="qi17" name="qi17" value="0" required></td>
+              <td><input type="radio" id="qi17" name="qi17" value="1"></td>
+              <td><input type="radio" id="qi17" name="qi17" value="2"></td>
+              <td><input type="radio" id="qi17" name="qi17" value="3"></td>
+              <td><input type="radio" id="qi17" name="qi17" value="4"></td>
+            </tr>
+
+
+
+            <tr>
+              <td><b>  18. </b></td>
+              <td><b>   I have repeated thoughts/images that I cannot control.  </b></td>
+              <td><input type="radio" id="qf18" name="qf18" value="0" required></td>
+              <td><input type="radio" id="qf18" name="qf18" value="1"></td>
+              <td><input type="radio" id="qf18" name="qf18" value="2"></td>
+              <td><input type="radio" id="qf18" name="qf18" value="3"></td>
+              <td><input type="radio" id="qf18" name="qf18" value="4"></td>
+              <td><input type="radio" id="qi18" name="qi18" value="0" required></td>
+              <td><input type="radio" id="qi18" name="qi18" value="1"></td>
+              <td><input type="radio" id="qi18" name="qi18" value="2"></td>
+              <td><input type="radio" id="qi18" name="qi18" value="3"></td>
+              <td><input type="radio" id="qi18" name="qi18" value="4"></td>
+            </tr>
+
+
+            <tr>
+              <td><b>  19. </b></td>
+              <td><b>  I contribute to important decisions.   </b></td>
+              <td><input type="radio" id="qf19" name="qf19" value="0" required></td>
+              <td><input type="radio" id="qf19" name="qf19" value="1"></td>
+              <td><input type="radio" id="qf19" name="qf19" value="2"></td>
+              <td><input type="radio" id="qf19" name="qf19" value="3"></td>
+              <td><input type="radio" id="qf19" name="qf19" value="4"></td>
+              <td><input type="radio" id="qi19" name="qi19" value="0" required></td>
+              <td><input type="radio" id="qi19" name="qi19" value="1"></td>
+              <td><input type="radio" id="qi19" name="qi19" value="2"></td>
+              <td><input type="radio" id="qi19" name="qi19" value="3"></td>
+              <td><input type="radio" id="qi19" name="qi19" value="4"></td>
+            </tr>
+
+
+            <tr>
+              <td><b>  20. </b></td>
+              <td><b>  I feel that others are totally controlling my life.   </b></td>
+              <td><input type="radio" id="qf20" name="qf20" value="0" required></td>
+              <td><input type="radio" id="qf20" name="qf20" value="1"></td>
+              <td><input type="radio" id="qf20" name="qf20" value="2"></td>
+              <td><input type="radio" id="qf20" name="qf20" value="3"></td>
+              <td><input type="radio" id="qf20" name="qf20" value="4"></td>
+              <td><input type="radio" id="qi20" name="qi20" value="0" required></td>
+              <td><input type="radio" id="qi20" name="qi20" value="1"></td>
+              <td><input type="radio" id="qi20" name="qi20" value="2"></td>
+              <td><input type="radio" id="qi20" name="qi20" value="3"></td>
+              <td><input type="radio" id="qi20" name="qi20" value="4"></td>
+            </tr>
+
+
+            <tr>
+              <td><b>  21. </b></td>
+              <td><b>  I feel worthless.   </b></td>
+              <td><input type="radio" id="qf21" name="qf21" value="0" required></td>
+              <td><input type="radio" id="qf21" name="qf21" value="1"></td>
+              <td><input type="radio" id="qf21" name="qf21" value="2"></td>
+              <td><input type="radio" id="qf21" name="qf21" value="3"></td>
+              <td><input type="radio" id="qf21" name="qf21" value="4"></td>
+              <td><input type="radio" id="qi21" name="qi21" value="0" required></td>
+              <td><input type="radio" id="qi21" name="qi21" value="1"></td>
+              <td><input type="radio" id="qi21" name="qi21" value="2"></td>
+              <td><input type="radio" id="qi21" name="qi21" value="3"></td>
+              <td><input type="radio" id="qi21" name="qi21" value="4"></td>
+            </tr>
+
+
+
+            <tr>
+              <td><b>  22. </b></td>
+              <td><b>   I find it difficult to concentrate.  </b></td>
+              <td><input type="radio" id="qf22" name="qf22" value="0" required></td>
+              <td><input type="radio" id="qf22" name="qf22" value="1"></td>
+              <td><input type="radio" id="qf22" name="qf22" value="2"></td>
+              <td><input type="radio" id="qf22" name="qf22" value="3"></td>
+              <td><input type="radio" id="qf22" name="qf22" value="4"></td>
+              <td><input type="radio" id="qi22" name="qi22" value="0" required></td>
+              <td><input type="radio" id="qi22" name="qi22" value="1"></td>
+              <td><input type="radio" id="qi22" name="qi22" value="2"></td>
+              <td><input type="radio" id="qi22" name="qi22" value="3"></td>
+              <td><input type="radio" id="qi22" name="qi22" value="4"></td>
+          </tr>
+
+
+          
+          <tr>
+            <td><b>  23. </b></td>
+            <td><b>  I am irritated by others.   </b></td>
+            <td><input type="radio" id="qf23" name="qf23" value="0" required></td>
+            <td><input type="radio" id="qf23" name="qf23" value="1"></td>
+            <td><input type="radio" id="qf23" name="qf23" value="2"></td>
+            <td><input type="radio" id="qf23" name="qf23" value="3"></td>
+            <td><input type="radio" id="qf23" name="qf23" value="4"></td>
+            <td><input type="radio" id="qi23" name="qi23" value="0" required></td>
+            <td><input type="radio" id="qi23" name="qi23" value="1"></td>
+            <td><input type="radio" id="qi23" name="qi23" value="2"></td>
+            <td><input type="radio" id="qi23" name="qi23" value="3"></td>
+            <td><input type="radio" id="qi23" name="qi23" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  24. </b></td>
+            <td><b>  I have lost interest in things that previously I found exciting.   </b></td>
+            <td><input type="radio" id="qf24" name="qf24" value="0" required></td>
+            <td><input type="radio" id="qf24" name="qf24" value="1"></td>
+            <td><input type="radio" id="qf24" name="qf24" value="2"></td>
+            <td><input type="radio" id="qf24" name="qf24" value="3"></td>
+            <td><input type="radio" id="qf24" name="qf24" value="4"></td>
+            <td><input type="radio" id="qi24" name="qi24" value="0" required></td>
+            <td><input type="radio" id="qi24" name="qi24" value="1"></td>
+            <td><input type="radio" id="qi24" name="qi24" value="2"></td>
+            <td><input type="radio" id="qi24" name="qi24" value="3"></td>
+            <td><input type="radio" id="qi24" name="qi24" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  25. </b></td>
+            <td><b>   I take decisions independently.  </b></td>
+            <td><input type="radio" id="qf25" name="qf25" value="0" required></td>
+            <td><input type="radio" id="qf25" name="qf25" value="1"></td>
+            <td><input type="radio" id="qf25" name="qf25" value="2"></td>
+            <td><input type="radio" id="qf25" name="qf25" value="3"></td>
+            <td><input type="radio" id="qf25" name="qf25" value="4"></td>
+            <td><input type="radio" id="qi25" name="qi25" value="0" required></td>
+            <td><input type="radio" id="qi25" name="qi25" value="1"></td>
+            <td><input type="radio" id="qi25" name="qi25" value="2"></td>
+            <td><input type="radio" id="qi25" name="qi25" value="3"></td>
+            <td><input type="radio" id="qi25" name="qi25" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  26. </b></td>
+            <td><b>  My sleep schedule is adversely affected.   </b></td>
+            <td><input type="radio" id="qf26" name="qf26" value="0" required></td>
+            <td><input type="radio" id="qf26" name="qf26" value="1"></td>
+            <td><input type="radio" id="qf26" name="qf26" value="2"></td>
+            <td><input type="radio" id="qf26" name="qf26" value="3"></td>
+            <td><input type="radio" id="qf26" name="qf26" value="4"></td>
+            <td><input type="radio" id="qi26" name="qi26" value="0" required></td>
+            <td><input type="radio" id="qi26" name="qi26" value="1"></td>
+            <td><input type="radio" id="qi26" name="qi26" value="2"></td>
+            <td><input type="radio" id="qi26" name="qi26" value="3"></td>
+            <td><input type="radio" id="qi26" name="qi26" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  27. </b></td>
+            <td><b>  I feel numb.   </b></td>
+            <td><input type="radio" id="qf27" name="qf27" value="0" required></td>
+            <td><input type="radio" id="qf27" name="qf27" value="1"></td>
+            <td><input type="radio" id="qf27" name="qf27" value="2"></td>
+            <td><input type="radio" id="qf27" name="qf27" value="3"></td>
+            <td><input type="radio" id="qf27" name="qf27" value="4"></td>
+            <td><input type="radio" id="qi27" name="qi27" value="0" required></td>
+            <td><input type="radio" id="qi27" name="qi27" value="1"></td>
+            <td><input type="radio" id="qi27" name="qi27" value="2"></td>
+            <td><input type="radio" id="qi27" name="qi27" value="3"></td>
+            <td><input type="radio" id="qi27" name="qi27" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  28. </b></td>
+            <td><b>   I feel that people are out there to get me.  </b></td>
+            <td><input type="radio" id="qf28" name="qf28" value="0" required></td>
+            <td><input type="radio" id="qf28" name="qf28" value="1"></td>
+            <td><input type="radio" id="qf28" name="qf28" value="2"></td>
+            <td><input type="radio" id="qf28" name="qf28" value="3"></td>
+            <td><input type="radio" id="qf28" name="qf28" value="4"></td>
+            <td><input type="radio" id="qi28" name="qi28" value="0" required></td>
+            <td><input type="radio" id="qi28" name="qi28" value="1"></td>
+            <td><input type="radio" id="qi28" name="qi28" value="2"></td>
+            <td><input type="radio" id="qi28" name="qi28" value="3"></td>
+            <td><input type="radio" id="qi28" name="qi28" value="4"></td>
+          </tr>
+
+
+
+          
+          <tr>
+            <td><b>  29. </b></td>
+            <td><b>  I find it difficult to control my impulses.   </b></td>
+            <td><input type="radio" id="qf29" name="qf29" value="0" required></td>
+            <td><input type="radio" id="qf29" name="qf29" value="1"></td>
+            <td><input type="radio" id="qf29" name="qf29" value="2"></td>
+            <td><input type="radio" id="qf29" name="qf29" value="3"></td>
+            <td><input type="radio" id="qf29" name="qf29" value="4"></td>
+            <td><input type="radio" id="qi29" name="qi29" value="0" required></td>
+            <td><input type="radio" id="qi29" name="qi29" value="1"></td>
+            <td><input type="radio" id="qi29" name="qi29" value="2"></td>
+            <td><input type="radio" id="qi29" name="qi29" value="3"></td>
+            <td><input type="radio" id="qi29" name="qi29" value="4"></td>
+          </tr>
+
+
+
+          <tr>
+            <td><b>  30. </b></td>
+            <td><b>  I feel isolated and lonely in social situations.   </b></td>
+            <td><input type="radio" id="qf30" name="qf30" value="0" required></td>
+            <td><input type="radio" id="qf30" name="qf30" value="1"></td>
+            <td><input type="radio" id="qf30" name="qf30" value="2"></td>
+            <td><input type="radio" id="qf30" name="qf30" value="3"></td>
+            <td><input type="radio" id="qf30" name="qf30" value="4"></td>
+            <td><input type="radio" id="qi30" name="qi30" value="0" required></td>
+            <td><input type="radio" id="qi30" name="qi30" value="1"></td>
+            <td><input type="radio" id="qi30" name="qi30" value="2"></td>
+            <td><input type="radio" id="qi30" name="qi30" value="3"></td>
+            <td><input type="radio" id="qi30" name="qi30" value="4"></td>
+        </tr>
+
+
+
+        <tr>
+          <td><b>  31. </b></td>
+          <td><b>   My eating habits are adversely affected.  </b></td>
+          <td><input type="radio" id="qf31" name="qf31" value="0" required></td>
+          <td><input type="radio" id="qf31" name="qf31" value="1"></td>
+          <td><input type="radio" id="qf31" name="qf31" value="2"></td>
+          <td><input type="radio" id="qf31" name="qf31" value="3"></td>
+          <td><input type="radio" id="qf31" name="qf31" value="4"></td>
+          <td><input type="radio" id="qi31" name="qi31" value="0" required></td>
+          <td><input type="radio" id="qi31" name="qi31" value="1"></td>
+          <td><input type="radio" id="qi31" name="qi31" value="2"></td>
+          <td><input type="radio" id="qi31" name="qi31" value="3"></td>
+          <td><input type="radio" id="qi31" name="qi31" value="4"></td>
+      </tr>
+
+
+
+      <tr>
+        <td><b>  32. </b></td>
+        <td><b>  I find it difficult to take everyday decisions.   </b></td>
+        <td><input type="radio" id="qf32" name="qf32" value="0" required></td>
+        <td><input type="radio" id="qf32" name="qf32" value="1"></td>
+        <td><input type="radio" id="qf32" name="qf32" value="2"></td>
+        <td><input type="radio" id="qf32" name="qf32" value="3"></td>
+        <td><input type="radio" id="qf32" name="qf32" value="4"></td>
+        <td><input type="radio" id="qi32" name="qi32" value="0" required></td>
+        <td><input type="radio" id="qi32" name="qi32" value="1"></td>
+        <td><input type="radio" id="qi32" name="qi32" value="2"></td>
+        <td><input type="radio" id="qi32" name="qi32" value="3"></td>
+        <td><input type="radio" id="qi32" name="qi32" value="4"></td>
+    </tr>
+
+
+    
+    <tr>
+      <td><b>  33. </b></td>
+      <td><b>  I feel bad when others do well.   </b></td>
+      <td><input type="radio" id="qf33" name="qf33" value="0" required></td>
+      <td><input type="radio" id="qf33" name="qf33" value="1"></td>
+      <td><input type="radio" id="qf33" name="qf33" value="2"></td>
+      <td><input type="radio" id="qf33" name="qf33" value="3"></td>
+      <td><input type="radio" id="qf33" name="qf33" value="4"></td>
+      <td><input type="radio" id="qi33" name="qi33" value="0" required></td>
+      <td><input type="radio" id="qi33" name="qi33" value="1"></td>
+      <td><input type="radio" id="qi33" name="qi33" value="2"></td>
+      <td><input type="radio" id="qi33" name="qi33" value="3"></td>
+      <td><input type="radio" id="qi33" name="qi33" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  34. </b></td>
+      <td><b>  I experience tightness and pressure in my chest.   </b></td>
+      <td><input type="radio" id="qf34" name="qf34" value="0" required></td>
+      <td><input type="radio" id="qf34" name="qf34" value="1"></td>
+      <td><input type="radio" id="qf34" name="qf34" value="2"></td>
+      <td><input type="radio" id="qf34" name="qf34" value="3"></td>
+      <td><input type="radio" id="qf34" name="qf34" value="4"></td>
+      <td><input type="radio" id="qi34" name="qi34" value="0" required></td>
+      <td><input type="radio" id="qi34" name="qi34" value="1"></td>
+      <td><input type="radio" id="qi34" name="qi34" value="2"></td>
+      <td><input type="radio" id="qi34" name="qi34" value="3"></td>
+      <td><input type="radio" id="qi34" name="qi34" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  35. </b></td>
+      <td><b>  I am confident about facing challenges.   </b></td>
+      <td><input type="radio" id="qf35" name="qf35" value="0" required></td>
+      <td><input type="radio" id="qf35" name="qf35" value="1"></td>
+      <td><input type="radio" id="qf35" name="qf35" value="2"></td>
+      <td><input type="radio" id="qf35" name="qf35" value="3"></td>
+      <td><input type="radio" id="qf35" name="qf35" value="4"></td>
+      <td><input type="radio" id="qi35" name="qi35" value="0" required></td>
+      <td><input type="radio" id="qi35" name="qi35" value="1"></td>
+      <td><input type="radio" id="qi35" name="qi35" value="2"></td>
+      <td><input type="radio" id="qi35" name="qi35" value="3"></td>
+      <td><input type="radio" id="qi35" name="qi35" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  36. </b></td>
+      <td><b>   I experience unbearable emotional pain.  </b></td>
+      <td><input type="radio" id="qf36" name="qf36" value="0" required></td>
+      <td><input type="radio" id="qf36" name="qf36" value="1"></td>
+      <td><input type="radio" id="qf36" name="qf36" value="2"></td>
+      <td><input type="radio" id="qf36" name="qf36" value="3"></td>
+      <td><input type="radio" id="qf36" name="qf36" value="4"></td>
+      <td><input type="radio" id="qi36" name="qi36" value="0" required></td>
+      <td><input type="radio" id="qi36" name="qi36" value="1"></td>
+      <td><input type="radio" id="qi36" name="qi36" value="2"></td>
+      <td><input type="radio" id="qi36" name="qi36" value="3"></td>
+      <td><input type="radio" id="qi36" name="qi36" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  37. </b></td>
+      <td><b>  I feel afraid about future.   </b></td>
+      <td><input type="radio" id="qf37" name="qf37" value="0" required></td>
+      <td><input type="radio" id="qf37" name="qf37" value="1"></td>
+      <td><input type="radio" id="qf37" name="qf37" value="2"></td>
+      <td><input type="radio" id="qf37" name="qf37" value="3"></td>
+      <td><input type="radio" id="qf37" name="qf37" value="4"></td>
+      <td><input type="radio" id="qi37" name="qi37" value="0" required></td>
+      <td><input type="radio" id="qi37" name="qi37" value="1"></td>
+      <td><input type="radio" id="qi37" name="qi37" value="2"></td>
+      <td><input type="radio" id="qi37" name="qi37" value="3"></td>
+      <td><input type="radio" id="qi37" name="qi37" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  38. </b></td>
+      <td><b> I am disappointed by people.    </b></td>
+      <td><input type="radio" id="qf38" name="qf38" value="0" required></td>
+      <td><input type="radio" id="qf38" name="qf38" value="1"></td>
+      <td><input type="radio" id="qf38" name="qf38" value="2"></td>
+      <td><input type="radio" id="qf38" name="qf38" value="3"></td>
+      <td><input type="radio" id="qf38" name="qf38" value="4"></td>
+      <td><input type="radio" id="qi38" name="qi38" value="0" required></td>
+      <td><input type="radio" id="qi38" name="qi38" value="1"></td>
+      <td><input type="radio" id="qi38" name="qi38" value="2"></td>
+      <td><input type="radio" id="qi38" name="qi38" value="3"></td>
+      <td><input type="radio" id="qi38" name="qi38" value="4"></td>
+    </tr>
+
+
+
+    
+    <tr>
+      <td><b>  39. </b></td>
+      <td><b>  I find it difficult to take initiative.   </b></td>
+      <td><input type="radio" id="qf39" name="qf39" value="0" required></td>
+      <td><input type="radio" id="qf39" name="qf39" value="1"></td>
+      <td><input type="radio" id="qf39" name="qf39" value="2"></td>
+      <td><input type="radio" id="qf39" name="qf39" value="3"></td>
+      <td><input type="radio" id="qf39" name="qf39" value="4"></td>
+      <td><input type="radio" id="qi39" name="qi39" value="0" required></td>
+      <td><input type="radio" id="qi39" name="qi39" value="1"></td>
+      <td><input type="radio" id="qi39" name="qi39" value="2"></td>
+      <td><input type="radio" id="qi39" name="qi39" value="3"></td>
+      <td><input type="radio" id="qi39" name="qi39" value="4"></td>
+    </tr>
+
+
+
+                  <tr>
+                    <td><b>  40. </b></td>
+                    <td><b>  My mood shifts suddenly without any apparent reason.   </b></td>
+                    <td><input type="radio" id="qf40" name="qf40" value="0" required></td>
+                    <td><input type="radio" id="qf40" name="qf40" value="1"></td>
+                    <td><input type="radio" id="qf40" name="qf40" value="2"></td>
+                    <td><input type="radio" id="qf40" name="qf40" value="3"></td>
+                    <td><input type="radio" id="qf40" name="qf40" value="4"></td>
+                    <td><input type="radio" id="qi40" name="qi40" value="0" required></td>
+                    <td><input type="radio" id="qi40" name="qi40" value="1"></td>
+                    <td><input type="radio" id="qi40" name="qi40" value="2"></td>
+                    <td><input type="radio" id="qi40" name="qi40" value="3"></td>
+                    <td><input type="radio" id="qi40" name="qi40" value="4"></td>
+                </tr>
+
+
+
+                <tr>
+                  <td><b>  41. </b></td>
+                  <td><b>  I feel hopeless.   </b></td>
+                  <td><input type="radio" id="qf41" name="qf41" value="0" required></td>
+                  <td><input type="radio" id="qf41" name="qf41" value="1"></td>
+                  <td><input type="radio" id="qf41" name="qf41" value="2"></td>
+                  <td><input type="radio" id="qf41" name="qf41" value="3"></td>
+                  <td><input type="radio" id="qf41" name="qf41" value="4"></td>
+                  <td><input type="radio" id="qi41" name="qi41" value="0" required></td>
+                  <td><input type="radio" id="qi41" name="qi41" value="1"></td>
+                  <td><input type="radio" id="qi41" name="qi41" value="2"></td>
+                  <td><input type="radio" id="qi41" name="qi41" value="3"></td>
+                  <td><input type="radio" id="qi41" name="qi41" value="4"></td>
+              </tr>
+
+
+
+              <tr>
+                <td><b>  42. </b></td>
+                <td><b>  I feel worried.   </b></td>
+                <td><input type="radio" id="qf42" name="qf42" value="0" required></td>
+                <td><input type="radio" id="qf42" name="qf42" value="1"></td>
+                <td><input type="radio" id="qf42" name="qf42" value="2"></td>
+                <td><input type="radio" id="qf42" name="qf42" value="3"></td>
+                <td><input type="radio" id="qf42" name="qf42" value="4"></td>
+                <td><input type="radio" id="qi42" name="qi42" value="0" required></td>
+                <td><input type="radio" id="qi42" name="qi42" value="1"></td>
+                <td><input type="radio" id="qi42" name="qi42" value="2"></td>
+                <td><input type="radio" id="qi42" name="qi42" value="3"></td>
+                <td><input type="radio" id="qi42" name="qi42" value="4"></td>
+            </tr>
+
+
+            
+            <tr>
+              <td><b>  43. </b></td>
+              <td><b>  I have pain in my limbs.   </b></td>
+              <td><input type="radio" id="qf43" name="qf43" value="0" required></td>
+              <td><input type="radio" id="qf43" name="qf43" value="1"></td>
+              <td><input type="radio" id="qf43" name="qf43" value="2"></td>
+              <td><input type="radio" id="qf43" name="qf43" value="3"></td>
+              <td><input type="radio" id="qf43" name="qf43" value="4"></td>
+              <td><input type="radio" id="qi43" name="qi43" value="0" required></td>
+              <td><input type="radio" id="qi43" name="qi43" value="1"></td>
+              <td><input type="radio" id="qi43" name="qi43" value="2"></td>
+              <td><input type="radio" id="qi43" name="qi43" value="3"></td>
+              <td><input type="radio" id="qi43" name="qi43" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  44. </b></td>
+              <td><b>  I am efficient.   </b></td>
+              <td><input type="radio" id="qf44" name="qf44" value="0" required></td>
+              <td><input type="radio" id="qf44" name="qf44" value="1"></td>
+              <td><input type="radio" id="qf44" name="qf44" value="2"></td>
+              <td><input type="radio" id="qf44" name="qf44" value="3"></td>
+              <td><input type="radio" id="qf44" name="qf44" value="4"></td>
+              <td><input type="radio" id="qi44" name="qi44" value="0" required></td>
+              <td><input type="radio" id="qi44" name="qi44" value="1"></td>
+              <td><input type="radio" id="qi44" name="qi44" value="2"></td>
+              <td><input type="radio" id="qi44" name="qi44" value="3"></td>
+              <td><input type="radio" id="qi44" name="qi44" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  45. </b></td>
+              <td><b>   I feel inferior to others while interacting.  </b></td>
+              <td><input type="radio" id="qf45" name="qf45" value="0" required></td>
+              <td><input type="radio" id="qf45" name="qf45" value="1"></td>
+              <td><input type="radio" id="qf45" name="qf45" value="2"></td>
+              <td><input type="radio" id="qf45" name="qf45" value="3"></td>
+              <td><input type="radio" id="qf45" name="qf45" value="4"></td>
+              <td><input type="radio" id="qi45" name="qi45" value="0" required></td>
+              <td><input type="radio" id="qi45" name="qi45" value="1"></td>
+              <td><input type="radio" id="qi45" name="qi45" value="2"></td>
+              <td><input type="radio" id="qi45" name="qi45" value="3"></td>
+              <td><input type="radio" id="qi45" name="qi45" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  46. </b></td>
+              <td><b>   I feel helpless.  </b></td>
+              <td><input type="radio" id="qf46" name="qf46" value="0" required></td>
+              <td><input type="radio" id="qf46" name="qf46" value="1"></td>
+              <td><input type="radio" id="qf46" name="qf46" value="2"></td>
+              <td><input type="radio" id="qf46" name="qf46" value="3"></td>
+              <td><input type="radio" id="qf46" name="qf46" value="4"></td>
+              <td><input type="radio" id="qi46" name="qi46" value="0" required></td>
+              <td><input type="radio" id="qi46" name="qi46" value="1"></td>
+              <td><input type="radio" id="qi46" name="qi46" value="2"></td>
+              <td><input type="radio" id="qi46" name="qi46" value="3"></td>
+              <td><input type="radio" id="qi46" name="qi46" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  47. </b></td>
+              <td><b>  I feel tense.   </b></td>
+              <td><input type="radio" id="qf47" name="qf47" value="0" required></td>
+              <td><input type="radio" id="qf47" name="qf47" value="1"></td>
+              <td><input type="radio" id="qf47" name="qf47" value="2"></td>
+              <td><input type="radio" id="qf47" name="qf47" value="3"></td>
+              <td><input type="radio" id="qf47" name="qf47" value="4"></td>
+              <td><input type="radio" id="qi47" name="qi47" value="0" required></td>
+              <td><input type="radio" id="qi47" name="qi47" value="1"></td>
+              <td><input type="radio" id="qi47" name="qi47" value="2"></td>
+              <td><input type="radio" id="qi47" name="qi47" value="3"></td>
+              <td><input type="radio" id="qi47" name="qi47" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  48. </b></td>
+              <td><b>  I have the freedom to choose from many options   </b></td>
+              <td><input type="radio" id="qf48" name="qf48" value="0" required></td>
+              <td><input type="radio" id="qf48" name="qf48" value="1"></td>
+              <td><input type="radio" id="qf48" name="qf48" value="2"></td>
+              <td><input type="radio" id="qf48" name="qf48" value="3"></td>
+              <td><input type="radio" id="qf48" name="qf48" value="4"></td>
+              <td><input type="radio" id="qi48" name="qi48" value="0" required></td>
+              <td><input type="radio" id="qi48" name="qi48" value="1"></td>
+              <td><input type="radio" id="qi48" name="qi48" value="2"></td>
+              <td><input type="radio" id="qi48" name="qi48" value="3"></td>
+              <td><input type="radio" id="qi48" name="qi48" value="4"></td>
+            </tr>
+
+
+
+            
+            <tr>
+              <td><b>  49. </b></td>
+              <td><b>  I feel that people around me are plotting against me.   </b></td>
+              <td><input type="radio" id="qf49" name="qf49" value="0" required></td>
+              <td><input type="radio" id="qf49" name="qf49" value="1"></td>
+              <td><input type="radio" id="qf49" name="qf49" value="2"></td>
+              <td><input type="radio" id="qf49" name="qf49" value="3"></td>
+              <td><input type="radio" id="qf49" name="qf49" value="4"></td>
+              <td><input type="radio" id="qi49" name="qi49" value="0" required></td>
+              <td><input type="radio" id="qi49" name="qi49" value="1"></td>
+              <td><input type="radio" id="qi49" name="qi49" value="2"></td>
+              <td><input type="radio" id="qi49" name="qi49" value="3"></td>
+              <td><input type="radio" id="qi49" name="qi49" value="4"></td>
+            </tr>
+
+
+
+            <tr>
+              <td><b>  50. </b></td>
+              <td><b>   I feel guilty.  </b></td>
+              <td><input type="radio" id="qf50" name="qf50" value="0" required></td>
+              <td><input type="radio" id="qf50" name="qf50" value="1"></td>
+              <td><input type="radio" id="qf50" name="qf50" value="2"></td>
+              <td><input type="radio" id="qf50" name="qf50" value="3"></td>
+              <td><input type="radio" id="qf50" name="qf50" value="4"></td>
+              <td><input type="radio" id="qi50" name="qi50" value="0" required></td>
+              <td><input type="radio" id="qi50" name="qi50" value="1"></td>
+              <td><input type="radio" id="qi50" name="qi50" value="2"></td>
+              <td><input type="radio" id="qi50" name="qi50" value="3"></td>
+              <td><input type="radio" id="qi50" name="qi50" value="4"></td>
+          </tr>
+
+
+          <tr>
+            <td><b>  51. </b></td>
+            <td><b>  I am independent.   </b></td>
+            <td><input type="radio" id="qf51" name="qf51" value="0" required></td>
+            <td><input type="radio" id="qf51" name="qf51" value="1"></td>
+            <td><input type="radio" id="qf51" name="qf51" value="2"></td>
+            <td><input type="radio" id="qf51" name="qf51" value="3"></td>
+            <td><input type="radio" id="qf51" name="qf51" value="4"></td>
+            <td><input type="radio" id="qi51" name="qi51" value="0" required></td>
+            <td><input type="radio" id="qi51" name="qi51" value="1"></td>
+            <td><input type="radio" id="qi51" name="qi51" value="2"></td>
+            <td><input type="radio" id="qi51" name="qi51" value="3"></td>
+            <td><input type="radio" id="qi51" name="qi51" value="4"></td>
+        </tr>
+
+
+        <tr>
+          <th colspan="12">
+              <button type="submit" class="button button1">Submit</button>
+          </th>
+        </tr>
+      
+
+
+                  </table>
+        </div>
+    </div>
+
+    <!-- <input type="submit" value="Submit"> -->
+
+ <!-- <button type="submit" class="button button1">Submit</button> -->
+
+
+</form>
+
+
+
+</body>
+</html>
+<br>
+<br>
+<br>                     
+
+
+
+
+
+

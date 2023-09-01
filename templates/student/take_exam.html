@@ -1,0 +1,120 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+  <style>
+    #demobox {
+      background-color: rgba(217, 218, 217, 0.943) ;
+      border: 3px solid  rgb(71, 66, 77); 
+      padding: 10px 2%;
+      font-size: 15px;   
+      text-align: justify;
+      }
+  </style>
+
+</head>
+
+
+
+<br><br>
+
+
+<div class="container my-4">
+    <div class="jumbotron">
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-default">
+
+                    
+
+                    <h2 class="card-title">Session : {{course.course_name}} </h2>
+                    <br>
+
+
+                    {% if course.id > highest_attempted_exam%}
+
+                        <h4 class="card-title">Rules :</h4>
+                        <p class="card-text">
+                            </p><ul style="list-style:decimal;">
+                                <li>You can watch the video multiple times during the session and save your intermediate answers but after submitting the answers you cannot change the answers.</li>
+                                <li>The next session will be enabled after submitting the current session answers.</li>
+                            </ul>
+                        <p></p>
+                    {%endif%}
+                    <br>
+                    {% if course.id == 1%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/0KG1uS36hPM"></iframe>
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/BNYShnVf_Wk"></iframe>
+                    {% elif course.id == 2%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/4dMS15Db5Zc"></iframe>
+                    {% elif course.id == 3%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/ZUlP1tpG7MI"></iframe>
+                    {% elif course.id == 4%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/_lZH3U0b1gU"></iframe>
+                    {% elif course.id == 5%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/Cq8H0bo7D9E"></iframe>
+                    {% elif course.id == 6%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/w9aTmETWwBs"></iframe>
+                    {% elif course.id == 7%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/0ROhH2NTpzE"></iframe>
+                    {% elif course.id == 8%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/usT87XMV-EE"></iframe>
+                    {% elif course.id == 9%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/jdB1ybcc12E"></iframe>
+                    {% elif course.id == 10%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/nO4KDZPYlB4"></iframe>
+                    {% elif course.id == 11%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/rVp4cOiVnQA"></iframe>
+                    {% elif course.id == 12%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/b645LNQbCx8"></iframe>
+                    {% elif course.id == 13%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/L1JaKTn992Q"></iframe>
+                    {% elif course.id == 14%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/x38apSQHlvw"></iframe>
+                    {% elif course.id == 15%}
+                    <iframe width="640" height="480" src="https://www.youtube.com/embed/1AjQo0tJnpU"></iframe>
+                    {% endif %}
+
+                    {% if course.id > highest_attempted_exam%}
+
+                    <div id="demobox">
+                        <b><u>Consent Letter before attending Sessions </b></u>
+                        <br>
+                        The sessions are based on Rational Emotive Behavioural Therapy (REBT), is a form of psychotherapy would help in reducing the symptoms of depression and anxiety. For better results, need to attend all sessions seriously, carefully and complete all sessions on or before time. Complete the Post-test two days after completing all sessions. 
+                        <br>
+                        The responses during the session will be kept confidential and will not be disclosed to any third party without your consent. The identity of individual participant will not be disclosed at any point in the research development.
+                        <br>
+                        Now I know the use of the sessions and understand that the responses of the sessions will be kept confidential. I am ready to take the sessions and agree for the session responses to be used for research purpose only.    
+                        <br>
+
+                    </div>
+
+                        <form action ="{% url 'start-exam' course.id  %}">
+                            I agree and give my consent <input type="checkbox" id="myCheck" name="test" required>
+                            <br>
+                            <input type="submit" value="Enter into Session">
+                        </form>
+
+                    {% endif %}
+
+
+
+
+                </div>  
+            </div>  
+        </div>  
+
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
